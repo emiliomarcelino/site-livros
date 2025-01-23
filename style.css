@@ -151,8 +151,10 @@ background-color: darkred;
 }
 
 .card{
-    width: 220px;
-    margin-left: 50px;
+    width:270px;
+        margin-left: 50px;
+        margin-right: 50px;
+        margin-top: 20px;
 }
     .cont2{
         margin-top: 30px;

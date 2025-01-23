@@ -151,7 +151,7 @@ background-color: darkred;
 }
 
 .card{
-    width:270px;
+    width:290px;
         margin-left: 50px;
         margin-right: 50px;
         margin-top: 20px;
@@ -159,7 +159,10 @@ background-color: darkred;
     .cont2{
         margin-top: 30px;
      }
-
+p{
+align-items:center;
+    justify-content:center;
+}
 
      .search-box:hover > .search-txt {
         width: 100px;

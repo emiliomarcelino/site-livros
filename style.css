@@ -1,0 +1,284 @@
+@charset "UTF-8";
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: Arial, sans-serif;
+}
+
+*{
+    margin: 0;
+}
+
+header {
+    background-color: black;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 50px;
+}
+
+.search-box {
+    position: absolute;
+    top: 50%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+    background:white;
+    height: 40px; /* Ajustado para alinhar melhor */
+    border-radius: 30px;
+    padding: 0 10px; /* Ajustado para evitar sobreposição */
+    display: flex;
+    align-items: center; /* Centraliza verticalmente os itens */
+}
+
+.search-btn {
+    color: aqua;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%; /* Correção no formato */
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    margin-left: 10px; /* Adicionado para espaçamento da borda do input */
+}
+
+.search-txt {
+    border: none;
+    background: none;
+    outline: none;
+    color: black;
+    font-size: 16px;
+    width: 0px;
+    transition: 0.4s ease-in-out;
+    height: 100%; /* Alinhado ao tamanho do box */
+    padding: 0 5px; /* Ajustado para evitar saltos */
+}
+
+.search-box:hover > .search-txt {
+    width: 240px;
+}
+
+.cont1{
+    background-color: darkred;
+    height: 420px;
+    top: 0;
+    left: 0;
+    width: 100%;
+   
+}
+
+.item{
+    width: 200px;
+    height: 300px;
+    border-radius: 6px;
+    display: inline-block;
+    padding-bottom: 50px;
+    
+}
+.gallery-items{
+    width: 200px;
+    height: 300px;
+    padding-top: 10px;
+    padding-left: 20px;
+    
+}
+
+.gallery-items img{
+    width: 150px;
+    height: 200px;
+    object-fit: cover; 
+    border: 1px solid whitesmoke;
+    box-shadow: 5px 5px 5px black;
+    transition: transform 0.3s;
+}
+.gallery-items:hover{
+    transform: scale(1.05);
+    transition: transform 0.5s linear;
+    color: darkblue; 
+   
+}
+
+.gallery-container{
+    display: flex;
+    padding-top: 20px;
+    gap:1vh;  
+}
+
+h1{
+    color: white;
+}
+
+.titulo{
+    color: white;
+    text-align: center;
+    text-decoration: underline darkred;
+    text-indent: -10px;
+    font-family: sans-serif;
+    
+}
+
+.gallery-items:hover .titulo{
+    color: darkblue;
+}
+
+.dest{
+    color: white;
+    padding-top: 90px;
+    text-indent: 20px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .gallery-container {
+        gap: 10px;
+    }
+ .cont1{
+    display: none;
+ }
+    .gallery-items {
+        width: 150px;
+    }
+header{
+background-color: darkred;
+}
+    .cont2{
+        margin-top: 30px;
+     }
+
+
+     .search-box:hover > .search-txt {
+        width: 100px;
+    }
+    
+    .titulo {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    
+    .gallery-items {
+        width: 90%; /* Quase toda a largura da tela */
+        margin: 0 auto;
+    }
+
+    .titulo {
+        font-size: 12px;
+    }
+}
+
+  /* Container para os cards */
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Card */
+  .card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Imagem */
+  .card-image img {
+    width: 100%;
+    height: 300px;
+  }
+  
+  /* Corpo do card */
+  .card-body {
+    padding: 10px;
+  }
+  
+  .card-body h3 {
+    font-size: 16px;
+    margin: 10px 0;
+    color: #333;
+  }
+  
+.LA{
+    color: black;
+    text-indent: 30px;
+    padding-top:30px ;
+}
+
+.br{
+    color: black;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+  
+.paginacao{
+    text-align: center;
+    color: white;
+    margin-top:60px;
+    padding: 5px;   
+    
+}
+.paginacao >a{
+    text-decoration: none;
+    display: inline-block;
+    padding: 3px 5px;
+    font-size: smaller;
+    border: 1px solid black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
+    transition: background-color 0.5s;   
+    height: 30px;
+    width: 30px;
+}
+.paginacao >a.ativa{
+    background-color: darkred;
+    font-weight: bold;
+    color: black; 
+    
+}
+.paginacao >a:hover:not(.ativa){
+    background-color: darkred; 
+    color: black;
+    transform: scale(1.1);
+}
+
+.rodape{
+    background-color: black;
+    height: 500px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.lv{
+    color:darkred;
+    margin-top: 30px;
+}
+
+hr{
+    color:darkred;
+    margin-top: 30px;
+}
